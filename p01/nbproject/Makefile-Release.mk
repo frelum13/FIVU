@@ -42,7 +42,7 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=-Wall -Os -mmcu=atmega16
+CFLAGS=-Wall -Os -mmcu=atmega328p
 
 # CC Compiler Flags
 CCFLAGS=
@@ -55,35 +55,35 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lprintf_flt
+LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/sure.elf
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/arduino.elf
 
-${CND_DISTDIR}/sure.elf: ${OBJECTFILES}
+${CND_DISTDIR}/arduino.elf: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}
-	${LINK.c} -o ${CND_DISTDIR}/sure.elf ${OBJECTFILES} ${LDLIBSOPTIONS} -mmcu=atmega16 -Wl,-Map=${CND_DISTDIR}/asuro.map,--cref -mmcu=atmega16 -Wl,-u,vfprintf,-Map=${CND_DISTDIR}/asuro.map,--cref
+	${LINK.c} -o ${CND_DISTDIR}/arduino.elf ${OBJECTFILES} ${LDLIBSOPTIONS} -mmcu=atmega328p -Wl,-Map=${CND_DISTDIR}/arduino.map,--cref
 
 ${OBJECTDIR}/src/app.o: src/app.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -Wall -s -DSURE_ATMEGA16 -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/app.o src/app.c
+	$(COMPILE.c) -O2 -Wall -s -DARDUINO_NANO_ATMEGA328P -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/app.o src/app.c
 
 ${OBJECTDIR}/src/main.o: src/main.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -Wall -s -DSURE_ATMEGA16 -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.c
+	$(COMPILE.c) -O2 -Wall -s -DARDUINO_NANO_ATMEGA328P -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.c
 
 ${OBJECTDIR}/src/mon.o: src/mon.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -Wall -s -DSURE_ATMEGA16 -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mon.o src/mon.c
+	$(COMPILE.c) -O2 -Wall -s -DARDUINO_NANO_ATMEGA328P -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mon.o src/mon.c
 
 ${OBJECTDIR}/src/sys.o: src/sys.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -Wall -s -DSURE_ATMEGA16 -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/sys.o src/sys.c
+	$(COMPILE.c) -O2 -Wall -s -DARDUINO_NANO_ATMEGA328P -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/sys.o src/sys.c
 
 # Subprojects
 .build-subprojects:

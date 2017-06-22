@@ -9,11 +9,11 @@ CND_DISTDIR=dist
 # Release configuration
 CND_PLATFORM_Release=GNU-AVR-Linux
 CND_ARTIFACT_DIR_Release=dist
-CND_ARTIFACT_NAME_Release=sure.elf
-CND_ARTIFACT_PATH_Release=dist/sure.elf
+CND_ARTIFACT_NAME_Release=arduino.elf
+CND_ARTIFACT_PATH_Release=dist/arduino.elf
 CND_PACKAGE_DIR_Release=dist/Release/GNU-AVR-Linux/package
-CND_PACKAGE_NAME_Release=ue11.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-AVR-Linux/package/ue11.tar
+CND_PACKAGE_NAME_Release=p01.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-AVR-Linux/package/p01.tar
 #
 # include compiler specific variables
 #

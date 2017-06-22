@@ -62,7 +62,7 @@ build: .build-post
 	avr-objcopy -O ihex -R .eeprom -R .eesafe  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release)  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release).hex
 	avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release)  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release).eep.hex
 	avr-objdump -h -S  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release) >  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release).lss
-	avr-size --mcu=atmega16 --format=avr  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release)
+	avr-size --mcu=atmega328p --format=avr  $(CND_BASEDIR)/$(CND_ARTIFACT_PATH_Release)
 
 # clean
 clean: .clean-post
@@ -72,8 +72,7 @@ clean: .clean-post
 
 .clean-post: .clean-impl
 # Add your post 'clean' code here...
-	@-test -d `pwd`/dist || mkdir `pwd`/dist
-	-rm -f `pwd`/dist/*
+	-test -d `pwd`/dist && rm -f `pwd`/dist/*
 
 # clobber
 clobber: .clobber-post

@@ -3,13 +3,15 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>ue11</name>
+            <name>p01</name>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>/tmp/arduinonano_4_atmega328p/src</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>Release</name>

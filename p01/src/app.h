@@ -6,9 +6,7 @@
 struct App
 {
   uint8_t flags_u8;
-  uint32_t time_MilliSeconds;
   uint8_t spannung;
-  uint8_t pwm;
 };
 
 extern volatile struct App app;

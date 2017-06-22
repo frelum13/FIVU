@@ -33,6 +33,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>/tmp/arduinonano_4_atmega328p/src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Release" type="1">
@@ -46,14 +49,15 @@
           <developmentMode>5</developmentMode>
           <stripSymbols>true</stripSymbols>
           <standard>3</standard>
-          <commandLine>-Wall -Os -mmcu=atmega16</commandLine>
+          <commandLine>-Wall -Os -mmcu=atmega328p</commandLine>
           <preprocessorList>
-            <Elem>SURE_ATMEGA16</Elem>
+            <Elem>ARDUINO_NANO_ATMEGA328P</Elem>
           </preprocessorList>
           <warningLevel>2</warningLevel>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <warningLevel>2</warningLevel>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -62,11 +66,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
-          <output>${CND_DISTDIR}/sure.elf</output>
-          <linkerLibItems>
-            <linkerLibLibItem>printf_flt</linkerLibLibItem>
-          </linkerLibItems>
-          <commandLine>-mmcu=atmega16 -Wl,-Map=${CND_DISTDIR}/asuro.map,--cref -mmcu=atmega16 -Wl,-u,vfprintf,-Map=${CND_DISTDIR}/asuro.map,--cref</commandLine>
+          <output>${CND_DISTDIR}/arduino.elf</output>
+          <commandLine>-mmcu=atmega328p -Wl,-Map=${CND_DISTDIR}/arduino.map,--cref</commandLine>
         </linkerTool>
       </compileType>
       <item path="src/app.c" ex="false" tool="0" flavor2="0">

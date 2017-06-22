@@ -36,34 +36,16 @@ void app_init (void)
 
 void app_main (void)
 {
-  
 }
 
 //--------------------------------------------------------
 
 void app_task_1ms (void) 
 {
-  static uint16_t pwmSum = 0;
-  app.time_MilliSeconds++;
-  if(pwmSum >= 1998)
-    pwmSum=0;
-  else
-    pwmSum += 2;
-  
-  if(pwmSum > 1000)
-    app.pwm = (2000-pwmSum)/10;
-  else
-    app.pwm = pwmSum/10;
-  
-  
   app.spannung = ADCH;
   ADCSRA |= (1<<ADSC);
 }
-void app_task_2ms (void) 
-{
-  
-
-}
+void app_task_2ms (void) {}
 void app_task_4ms (void) {}
 void app_task_8ms (void) {}
 void app_task_16ms (void) {}

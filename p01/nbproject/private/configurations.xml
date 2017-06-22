@@ -25,9 +25,9 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>"htl" ep dist/sure.elf.hex atmega16 57600 cp210x</runcommandpicklistitem>
+          <runcommandpicklistitem>"htl" ep dist/arduino.elf.hex atmega328p 57600 ftdi_sio</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"htl" ep dist/sure.elf.hex atmega16 57600 cp210x</runcommand>
+        <runcommand>"htl" ep dist/arduino.elf.hex atmega328p 57600 ftdi_sio</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
